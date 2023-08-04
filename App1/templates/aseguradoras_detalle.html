@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Detalle de aseguradoras disponibles</h1>
+{% endblock %}
+
+{% block contenidoQueCambia %}
+
+<div style="background-color: #da9f6c" class="d-flex flex-column align-self-baseline py-4">
+    <h2>Datos de la aseguradora</h2>
+    <ul style="list-style: none;">
+        
+        <p> Nombre: <i> {{aseguradoras.nombre}} </i></p>
+        <p> Direccion: <i> {{aseguradoras.direccion}} </i></p>
+        <p> Email: <i> {{aseguradoras.email}} </i></p>
+        <p> Teléfono: <i> {{aseguradoras.telefono}} </i></p>
+        <p>
+            <a class="btn btn-primary" href = "{% url 'aseguradoras_list' %}"> Atrás </a>
+        </p>
+
+        
+    </body>
+    </html>
+{% endblock %}

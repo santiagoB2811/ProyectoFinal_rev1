@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Agregar nueva Aseguradora</h1>
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<div style="background-color: #da9f6c" class="d-flex flex-column align-items-center py-4">
+    <h1>Agregar nueva Aseguradora</h1>
+    
+    <form class="d-flex flex-column align-items-center" method="post">{% csrf_token %}
+        {{ form.as_p}}
+        <div>
+            <input class="btn btn-success" type="submit" value="Agregar">
+            <a class="btn btn-primary" href="{% url 'aseguradoras_list' %}">Volver</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

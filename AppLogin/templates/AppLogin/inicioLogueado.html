@@ -1,0 +1,17 @@
+{% extends "AppLogin/padre.html" %}
+
+{% load static %}
+{% block titulo %}
+<h1 class="mb-5">SESION INICIADA</h1>
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    <div style="background-color: #da9f6c" class="d-flex flex-column align-items-center py-4">
+        <img height="40px" src="{{url}}">
+        <h1 class="mb-4-text text-center">BIENVENIDO {{user.username}}!</h1>
+        
+
+    </div>
+
+{% endblock %}
+

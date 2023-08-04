@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div style="background-color: #da9f6c" class="d-flex flex-column align-self-baseline py-4">
+<h2>Listado de Aseguradoras disponibles</h2>
+<ul style="list-style: none;">
+        
+    {% for aseguradora in object_list %}
+
+         <li style="background-color: #da9f6c" class="my-2 rounded">
+            {{aseguradora.nombre}} 
+                
+                <a class="btn btn-primary" href = "{% url 'aseguradoras_detalle' aseguradora.id %}"> +Info</a>
+                <a class="btn btn-success" href = "{% url 'aseguradoras_editar' aseguradora.id %}"> Editar</a>
+                <a class="btn btn-danger"  href = "{% url 'aseguradoras_borrar' aseguradora.id %}"> Borrar</a>
+                
+        </li>
+    
+    {% endfor %}
+
+    <a class="btn btn-primary" href="{% url 'aseguradoras_crear' %}">Agregar Nueva aseguradora</a>
+            
+</ul>
+<h3>{{ mensaje }}</h3>
+</div> 
+        
+{% endblock %}
+

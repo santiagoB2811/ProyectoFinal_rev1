@@ -1,0 +1,32 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div style="background-color: #da9f6c" class="d-flex flex-column align-self-baseline py-4">
+<h2>Listado de Productores Asesores</h2>
+<ul style="list-style: none;">
+        
+    {% for productor in object_list %}
+
+         <li style="background-color: #da9f6c" class="my-2 rounded">
+            {{productor.nombre}}            {{productor.apellido}} 
+            
+
+                
+            <a class="btn btn-primary" href = "{% url 'productores_detalle' productor.id %}"> +Info</a>
+            <a class="btn btn-success" href = "{% url 'productores_editar' productor.id %}"> Editar</a>
+            <a class="btn btn-danger"  href = "{% url 'productores_borrar' productor.id %}"> Borrar</a>
+                
+        </li>
+    
+    {% endfor %}
+
+    <a class="btn btn-primary" href="{% url 'productores_crear' %}">Agregar nuevo Productor Asesor</a>
+            
+</ul>
+<h3>{{ mensaje }}</h3>
+</div> 
+        
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+
+{% block contenidoQueCambia %}
+<h1>FORMULARIO DE ASEGURADORAS</h1>
+<div style="background-color: #da9f6c" class="d-flex flex-column align-self-baseline py-4"></div>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p}}
+        <input class="btn btn-success" type="submit" value="Editar">
+        <a class="btn btn-primary" href="{% url 'aseguradoras_list' %}">Atras</a>
+    </form>
+{% endblock %}

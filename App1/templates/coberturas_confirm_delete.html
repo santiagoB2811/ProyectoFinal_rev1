@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div style="background-color: #da9f6c" class="d-flex flex-column align-items-center py-4">
+    <h1>¿Deseas eliminar la cobertura?</h1>
+
+    <form method="post">{% csrf_token %}
+        <p>¿Estas seguro que deseas eliminar esta cobertura <i> {{coberturas.nombre}} </i>?</p>
+    <div class="d-flex justify-content-evenly">
+        <input class="btn btn-danger" type="submit" value="Eliminar">
+        <a class="btn btn-primary" href="{% url 'coberturas_list' %}">Volver</a>
+    </div>
+
+    </form>
+</div>
+
+{% endblock %}

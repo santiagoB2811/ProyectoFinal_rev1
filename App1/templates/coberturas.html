@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    
+<section class="page-section bg-primary" id="coberturas">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Tenemos la mejor cobertura para vos!</h2>
+                
+                <p class="text-white-75 mb-4">Seleccioná y compará las diferentes coberturas de las mejores compañías aseguradoras y elegí la que mejor se adapte a VOS</p>
+                <a class="btn btn-light btn-xl" href="{% url 'coberturas_list' %}">CONOCELAS!</a>
+                
+            </div>
+        </div>
+    </div>                  
+                        
+{% endblock %}

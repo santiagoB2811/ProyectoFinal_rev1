@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+        {% if miFormulario.errors %}
+        <p style="color: red" > Estan mal los datos, revisar. </p>
+        {% endif %}
+
+    <p>Estamos buscando el: {{nombre}}</p>
+
+    {% if aseguradoras %}
+
+        <ul>
+            {% for aseguradora in aseguradoras %}
+                <li>{{aseguradora.nombre}}</li>
+                
+            {% endfor %}
+
+        </ul>
+
+    {% endif %}
+
+{% endblock %}

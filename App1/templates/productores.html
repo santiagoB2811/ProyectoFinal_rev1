@@ -1,0 +1,38 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<section class="page-section" id="productores">
+    <div class="container px-5 px-lg-5 text-center">
+        <a class="btn btn-primary btn-xl" href="{% url 'productores_list' %}">Encontrá los mejores Productores Asesores</a>
+        <div class="row gx-4 gx-lg-5 h-100 align-items-left justify-content-center text">  
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Todos en un mismo sitio</h3>
+                    <p class="text-muted mb-0">Los mejores productores asesores del pais solo a un click!</p>
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-end">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">On-line</h3>
+                    <p class="text-muted mb-0">Contactate con los mejores productores asesores las 24hs del día.</p>
+                </div>
+            </div>
+
+            <!--<div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Made with Love</h3>
+                    <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</section>
+{% endblock %}

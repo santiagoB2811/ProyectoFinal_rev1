@@ -1,0 +1,29 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div style="background-color: #da9f6c" class="d-flex flex-column align-self-baseline py-4">
+<h2>Listado de coberturas disponibles</h2>
+<ul style="list-style: none;">
+        
+    {% for cobertura in object_list %}
+
+         <li style="background-color: #da9f6c" class="my-2 rounded">
+            {{cobertura.ramo}} - {{cobertura.nombre}} 
+                 
+                <a class="btn btn-primary" href = "{% url 'coberturas_detalle' cobertura.id %}"> +Info</a>
+                <a class="btn btn-success" href = "{% url 'coberturas_editar' cobertura.id %}"> Editar</a>
+                <a class="btn btn-danger"  href = "{% url 'coberturas_borrar' cobertura.id %}"> Borrar</a>
+                
+        </li>
+    
+    {% endfor %}
+
+    <a class="btn btn-primary" href="{% url 'coberturas_crear' %}">Agregar nueva cobertura</a>
+            
+</ul>
+<h3>{{ mensaje }}</h3>
+</div> 
+        
+{% endblock %}

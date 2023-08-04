@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Formulario - Agregar aseguradora</h1>
+</head>
+<body>
+    {% if miFormulario.errors %}
+    <p style="color: red" > Estan mal los datos, revisar. </p>
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <!--Acá abajo agrego los elementos de Django-->
+
+        <table>
+            {{ miFormulario.as_table }}
+            
+        </table>
+        
+        <input type = "submit" value="Enviar">
+    </form>
+</body>
+</html>

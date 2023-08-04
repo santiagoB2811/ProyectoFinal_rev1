@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    {% if miFormulario.errors %}
+    <p style="color: red" > Estan mal los datos, revisar. </p>
+    {% endif %}
+
+<section class="page-section bg-dark text-white" id="aseguradoras">
+    <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-4">Seleccioná entre las mejores aseguradoras</h1>
+        <a class="btn btn-light btn-xl" href="{% url 'aseguradoras_list' %}">Descubrilas!</a>
+        <div class="row gx-4 gx-lg-5 h-100 align-items-left justify-content-center text">
+            <div class="col-lg-8 align-self-end">
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

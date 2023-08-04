@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Detalle de Productores Asesores</h1>
+{% endblock %}
+
+{% block contenidoQueCambia %}
+
+<div style="background-color: #da9f6c" class="d-flex flex-column align-self-baseline py-4">
+    <h2>Datos del Productor Asesor</h2>
+    <ul style="list-style: none;">
+        
+        <p> Nombre: <i> {{productores.nombre}} </i></p>
+        <p> Apellido: <i> {{productores.apellido}} </i></p>
+        <p> Email: <i> {{productores.email}} </i></p>
+        <p> Teléfono: <i> {{productores.telefono}} </i></p>
+        <p>
+            <a class="btn btn-primary" href = "{% url 'productores_list' %}"> Atrás </a>
+        </p>
+
+        
+    </body>
+    </html>
+{% endblock %}
