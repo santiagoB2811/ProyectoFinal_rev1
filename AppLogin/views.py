@@ -88,7 +88,7 @@ def editarPerfil(request):
 
     return render(request, "AppLogin/editarPerfil.html", {"miFormulario": miFormulario, "usuario": usuario})
 
-# AVATAR:
+# AVATARES:
 @login_required
 def agregarAvatar(request):
     if request.method == "POST":
